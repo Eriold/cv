@@ -1,0 +1,322 @@
+﻿@font-face {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("./fonts/Raleway-400.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("./fonts/Raleway-500.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("./fonts/Raleway-600.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("./fonts/Raleway-700.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url("./fonts/Raleway-800.ttf") format("truetype");
+    }
+
+    :root {
+      --bg: #f4f7f8;
+      --ink: #17212b;
+      --muted: #5f6f7c;
+      --line: #d9e1e5;
+      --accent: #16b6a6;
+      --accent-dark: #0d8178;
+      --panel: #ffffff;
+      --header: #26323d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: var(--panel);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+      overflow: hidden;
+    }
+
+    .hero {
+      background: var(--header);
+      color: white;
+      padding: 28px 36px 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: -0.7px;
+      line-height: 1.05;
+      font-weight: 800;
+    }
+
+    .title {
+      margin: 8px 0 14px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .summary {
+      margin: 0;
+      max-width: 760px;
+      color: #e6edf0;
+      font-size: 13.5px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      background: linear-gradient(135deg, var(--accent), #dffaf7);
+      border: 4px solid rgba(255,255,255,0.25);
+    }
+
+    .contact {
+      background: #121b22;
+      color: #eef6f7;
+      padding: 12px 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 18px;
+      font-size: 12.5px;
+    }
+
+    .contact a {
+      color: #e9f9f8;
+      text-decoration: underline;
+      text-decoration-color: rgba(22, 182, 166, 0.55);
+      text-underline-offset: 3px;
+      transition: color 0.18s ease, text-decoration-color 0.18s ease, opacity 0.18s ease;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      color: #7ff0e5;
+      text-decoration-color: currentColor;
+      outline: none;
+    }
+
+    .contact span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .content {
+      padding: 28px 36px 34px;
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 34px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .job {
+      padding: 0 0 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .job:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .company {
+      margin: 2px 0 0;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .job-meta {
+      min-width: 150px;
+      text-align: right;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .job-description {
+      margin: 9px 0 8px;
+      color: #334250;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .side-block {
+      margin-bottom: 22px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 8px;
+      background: #eaf3f4;
+      border: 1px solid #d2e4e6;
+      color: #26323d;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .mini-item {
+      margin-bottom: 14px;
+    }
+
+    .mini-item p {
+      margin: 3px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        min-height: 297mm;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar {
+        display: none;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .job-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .job-meta {
+        text-align: left;
+      }
+    }
+  
+
+
