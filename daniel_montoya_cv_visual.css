@@ -67,6 +67,34 @@
       text-decoration: none;
     }
 
+    .export-actions {
+      width: min(210mm, calc(100% - 32px));
+      margin: 18px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .export-button {
+      appearance: none;
+      border: 1px solid rgba(22, 182, 166, 0.55);
+      border-radius: 8px;
+      background: var(--accent);
+      color: #09221f;
+      cursor: pointer;
+      font: 700 13px/1 "Raleway", "Segoe UI", Arial, sans-serif;
+      padding: 10px 14px;
+      transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .export-button:hover,
+    .export-button:focus-visible {
+      background: #7ff0e5;
+      border-color: #7ff0e5;
+      outline: none;
+      transform: translateY(-1px);
+    }
+
     .page {
       width: 210mm;
       min-height: 297mm;
@@ -343,6 +371,10 @@
         background: white;
       }
 
+      .export-actions {
+        display: none;
+      }
+
       .page {
         margin: 0;
         box-shadow: none;
@@ -352,6 +384,10 @@
     }
 
     @media (max-width: 900px) {
+      .export-actions {
+        flex-direction: column;
+      }
+
       .page {
         width: 100%;
         margin: 0;
