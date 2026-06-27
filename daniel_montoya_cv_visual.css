@@ -364,7 +364,16 @@
     @media print {
       @page {
         size: A4;
-        margin: 0;
+        margin: 16mm 0 0;
+      }
+
+      @page :first {
+        margin: 0 0 12mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
       body {
@@ -381,9 +390,33 @@
         width: 210mm;
         min-height: 297mm;
       }
+
+      .hero {
+        grid-template-columns: 1fr auto;
+      }
+
+      .avatar {
+        display: block;
+      }
+
+      .contact {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .content {
+        grid-template-columns: 1.5fr 1fr;
+      }
+
+      .job-header {
+        flex-direction: row;
+      }
+
+      .job-meta {
+        text-align: right;
+      }
     }
 
-    @media (max-width: 900px) {
+    @media screen and (max-width: 900px) {
       .export-actions {
         flex-direction: column;
       }
