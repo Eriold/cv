@@ -39,7 +39,7 @@
     }
 
     :root {
-      --bg: #f4f7f8;
+      --bg: #262829;
       --ink: #17212b;
       --muted: #5f6f7c;
       --line: #d9e1e5;
@@ -129,22 +129,87 @@
       font-size: 12.5px;
     }
 
-    .contact a {
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       color: #e9f9f8;
-      text-decoration: underline;
-      text-decoration-color: rgba(22, 182, 166, 0.55);
-      text-underline-offset: 3px;
-      transition: color 0.18s ease, text-decoration-color 0.18s ease, opacity 0.18s ease;
+      min-width: 0;
+      text-decoration: none;
+      padding: 5px 10px 5px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: color 0.18s ease, opacity 0.18s ease;
     }
 
-    .contact a:hover,
-    .contact a:focus-visible {
+    .contact-item:hover,
+    .contact-item:focus-visible {
       color: #7ff0e5;
-      text-decoration-color: currentColor;
       outline: none;
     }
 
-    .contact span {
+    .contact-icon {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      background: rgba(22, 182, 166, 0.12);
+      border: 1px solid rgba(22, 182, 166, 0.28);
+      border-radius: 50%;
+    }
+
+    .contact-icon svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-icon svg.brand {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .contact-icon svg.brand rect {
+      fill: currentColor;
+      opacity: 0.18;
+    }
+
+    .contact-icon svg.brand path {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .contact-icon svg.linkedin {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .contact-icon svg.linkedin rect {
+      fill: currentColor;
+      opacity: 0.18;
+    }
+
+    .contact-icon svg.linkedin path {
+      fill: #ffffff;
+      stroke: none;
+    }
+
+    .contact-text {
+      display: block;
+      min-width: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -161,6 +226,7 @@
       margin: 0 0 12px;
       color: var(--accent-dark);
       font-size: 16px;
+      font-weight: 800;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       border-bottom: 2px solid var(--accent);
@@ -170,7 +236,7 @@
 
     h3 {
       margin: 0;
-      font-size: 15px;
+      font-size: 16px;
       color: var(--ink);
     }
 
@@ -318,5 +384,3 @@
       }
     }
   
-
-
