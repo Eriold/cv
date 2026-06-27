@@ -97,8 +97,8 @@
     .title {
       margin: 8px 0 14px;
       color: var(--accent);
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 400;
+      font-size: 18px;
     }
 
     .summary {
@@ -135,36 +135,35 @@
       gap: 8px;
       color: #e9f9f8;
       min-width: 0;
-      text-decoration: none;
-      padding: 5px 10px 5px 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: color 0.18s ease, opacity 0.18s ease;
+      text-decoration: underline;
+      text-decoration-color: rgba(22, 182, 166, 0.55);
+      text-underline-offset: 3px;
+      transition: color 0.18s ease, text-decoration-color 0.18s ease, opacity 0.18s ease;
     }
 
     .contact-item:hover,
     .contact-item:focus-visible {
       color: #7ff0e5;
+      text-decoration-color: currentColor;
       outline: none;
     }
 
     .contact-icon {
-      width: 28px;
-      height: 28px;
-      flex: 0 0 28px;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: var(--accent);
-      background: rgba(22, 182, 166, 0.12);
-      border: 1px solid rgba(22, 182, 166, 0.28);
-      border-radius: 50%;
+      background: transparent;
+      border: none;
+      border-radius: 0;
     }
 
     .contact-icon svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       display: block;
       fill: none;
       stroke: currentColor;
@@ -174,8 +173,8 @@
     }
 
     .contact-icon svg.brand {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
       stroke: none;
     }
@@ -191,8 +190,8 @@
     }
 
     .contact-icon svg.linkedin {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
       stroke: none;
     }
@@ -218,7 +217,7 @@
     .content {
       padding: 28px 36px 34px;
       display: grid;
-      grid-template-columns: 1.7fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
       gap: 34px;
     }
 
