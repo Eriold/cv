@@ -1,0 +1,11 @@
+# Generated CV exports
+/output/
+/daniel_montoya_cv_ats.txt
+
+# Local previews and temporary files
+/tmp/
+__pycache__/
+*.py[cod]
+
+# Local review notes
+/revision_cv.md
